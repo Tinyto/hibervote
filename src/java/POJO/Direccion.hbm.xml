@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15-feb-2016 11:50:59 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="POJO.Direccion" table="direccion" catalog="personadireccion" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="calle" type="string">
+            <column name="Calle" length="50" />
+        </property>
+        <property name="portal" type="string">
+            <column name="Portal" length="50" />
+        </property>
+        <property name="piso" type="string">
+            <column name="Piso" length="50" />
+        </property>
+        <one-to-one name="persona" class="POJO.Persona"></one-to-one>
+    </class>
+</hibernate-mapping>
