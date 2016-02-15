@@ -12,7 +12,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>ASDFASDFDAFSDFFA</h1>
         <h1>Hello Tiny!</h1>
     </body>
 </html>
