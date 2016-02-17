@@ -17,5 +17,7 @@
         <h2>Deja de liarmela - parte 2</h2>
         <h3>Cambio chorrilero prueba</h3>
         <h3>Cambio radical</h3>
+        <p>Para subir, push hacia origin/master</p>
+        <p>Para bajar, fetch de origin/master, y luego merge de origin/master</p>
     </body>
 </html>
