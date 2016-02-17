@@ -16,6 +16,6 @@
         <h1>Hello Tiny!</h1>
         <h2>Deja de liarmela - parte 2</h2>
         <h3>Cambio chorrilero prueba</h3>
-        <h3>Cambio chorrilero prueba 2</h3>
+        <h3>Cambio radical</h3>
     </body>
 </html>
