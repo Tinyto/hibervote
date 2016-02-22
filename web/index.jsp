@@ -16,9 +16,12 @@
     <body>
         <h1>Proyecto Persona-Dirección</h1>
         <form method="POST" action="Dispatcher" id="formalta">
-            <h3>DAR DE ALTA</h3>
+           
             
-            <table > 
+            <table >    <tr>
+                            <th colspan="2"><h3>DAR DE ALTA</h3></th> 
+
+                        </tr>
                         <tr>
                             <th colspan="2"><p>DATOS PERSONA</p></th> 
 
@@ -65,9 +68,9 @@
                             
                         </tr>
             
-            <input type="hidden" name="a" value="alta">
-            <input type="submit" value="Dar de Alta"> 
             </table>
+             <input type="hidden" name="a" value="alta">
+            <input type="submit" value="Dar de Alta"> 
         </form>
         <form method="POST" action="Dispatcher" id="formbaja">
             
