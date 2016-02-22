@@ -60,7 +60,7 @@ public class Listarpersona extends HttpServlet {
            
             
             
-          out.print("<a href='index.jsp'><button value='Volver a inicio'></a>");
+          out.print("<a href='index.jsp'><button>Volver</button></a>");
            
         }
     }
