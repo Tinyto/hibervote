@@ -12,6 +12,10 @@
         <servlet-name>Dispatcher</servlet-name>
         <servlet-class>BLL.Dispatcher</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Listarpersona</servlet-name>
+        <servlet-class>BLL.Listarpersona</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Altapersona</servlet-name>
         <url-pattern>/Altapersona</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>Dispatcher</servlet-name>
         <url-pattern>/Dispatcher</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Listarpersona</servlet-name>
+        <url-pattern>/Listarpersona</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
