@@ -42,7 +42,7 @@ public class Listarpersona extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         HttpSession session = request.getSession(true);
         Operaciones op=new Operaciones();
-        Iterator it=op.getGente();
+        Iterator it=op.getgente(con);
         Persona p;
         
         try (PrintWriter out = response.getWriter()) {
