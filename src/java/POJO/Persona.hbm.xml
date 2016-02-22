@@ -10,7 +10,7 @@
                 <param name="property">direccion</param>
             </generator>
         </id>
-        <one-to-one name="direccion" class="POJO.Direccion" constrained="true"></one-to-one>
+        <one-to-one name="direccion" class="POJO.Direccion" constrained="true" cascade="all"></one-to-one>
         <property name="nombre" type="string">
             <column name="Nombre" length="50" not-null="true" />
         </property>
