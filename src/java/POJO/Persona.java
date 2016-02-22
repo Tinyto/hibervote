@@ -40,6 +40,10 @@ public class Persona  implements java.io.Serializable {
     }
     
     
+    
+    public Persona(String dni){
+        this.dni=dni;
+    }
    
     public Integer getId() {
         return this.id;
