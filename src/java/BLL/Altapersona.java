@@ -47,11 +47,12 @@ private SessionFactory con;
         HttpSession session=request.getSession(true);
         
         String name=request.getParameter("name");
-        String surname=request.getParameter("apellido");
+        String surname=request.getParameter("lastname");
         String phone=request.getParameter("phone");
         String DNI=request.getParameter("nif");
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        LocalDate nacimiento=LocalDate.parse(request.getParameter("birthdate"),formatter);
+//        System.out.println(request.getParameter("birthdate"));
+//        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate nacimiento=LocalDate.parse(request.getParameter("birthdate"));
         
         
         
@@ -70,9 +71,11 @@ private SessionFactory con;
         
         if(result==1){
             session.setAttribute("error", "<span style='color:green'>Persona dada de alta correctamente</span>");
+            response.sendRedirect("index.jsp");
         }
         else{
             session.setAttribute("error", "<span style='color:red'>Error añadiendo a la persona</span>");
+            response.sendRedirect("index.jsp");
         }
         
         
