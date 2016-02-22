@@ -48,10 +48,10 @@ public class Bajapersona extends HttpServlet {
         
         if(result!=-1){
             
-            session.setAttribute("error","La persona se dio de baja correctamente.");
+            session.setAttribute("error","<span style='color:green'>La persona se dio de baja correctamente.</span>");
         }else{
             
-           session.setAttribute("error","Error dando de baja, inténtelo de nuevo."); 
+           session.setAttribute("error","<span style='color:red'>Error dando de baja, inténtelo de nuevo.</span>"); 
         }
        
         

@@ -50,7 +50,7 @@
                         </tr>
                         <tr>
                             <td><label>F.Nacimiento</label></td>
-                            <td><input type="text" name="birthdate" required><br/></td> 
+                            <td><input type="date" name="birthdate" required><br/></td> 
                             
                         </tr>
                         
