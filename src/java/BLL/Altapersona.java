@@ -12,6 +12,7 @@ import POJO.Persona;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -49,7 +50,8 @@ private SessionFactory con;
         String surname=request.getParameter("apellido");
         String phone=request.getParameter("phone");
         String DNI=request.getParameter("nif");
-        LocalDate nacimiento=LocalDate.parse(request.getParameter("birthdate"));
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate nacimiento=LocalDate.parse(request.getParameter("birthdate"),formatter);
         
         
         
