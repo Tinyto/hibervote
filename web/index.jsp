@@ -16,9 +16,16 @@
     <body>
         <h1>Proyecto Persona-Dirección</h1>
         <form method="POST" action="Dispatcher" id="formalta">
-            <h3>DAR DE ALTA</h3>
-            <p>DATOS PERSONA</p>
-            <table > 
+           
+            
+            <table >    <tr>
+                            <th colspan="2"><h3>DAR DE ALTA</h3></th> 
+
+                        </tr>
+                        <tr>
+                            <th colspan="2"><p>DATOS PERSONA</p></th> 
+
+                        </tr>
                         <tr>
                             <td><label>Nombre</label></td>
                             <td><input type="text" name="name" required><br/></td> 
@@ -40,25 +47,47 @@
                             <td><input type="text" name="birthdate" required><br/></td> 
                             
                         </tr>
-                                    
+                        
+                        <tr>
+                            <th colspan="2"><p>DATOS DIRECCIÓN</p></th> 
+
+                        </tr>
+                        <tr>
+                            <td> <label>Calle</label></td>
+                            <td><input type="text" name="street" required><br/></td> 
+                            
+                        </tr>
+                        <tr>
+                            <td><label>Portal</label></td>
+                            <td><input type="text" name="portal" required><br/></td> 
+                            
+                        </tr>
+                        <tr>
+                            <td><label>Piso</label></td>
+                            <td><input type="text" name="floor" required><br/><br/></td> 
+                            
+                        </tr>
             
-            
-            
-            <p>DATOS DIRECCIÓN</p>
-            <label>Calle</label><input type="text" name="street" required><br/>
-            <label>Portal</label><input type="text" name="portal" required><br/>
-            <label>Piso</label><input type="text" name="floor" required><br/><br/>
-            
-            <input type="hidden" name="a" value="alta">
-            <input type="submit" value="Dar de Alta"> 
             </table>
+             <input type="hidden" name="a" value="alta">
+            <input type="submit" value="Dar de Alta"> 
         </form>
         <form method="POST" action="Dispatcher" id="formbaja">
             
-            <h3>DAR DE BAJA</h3>
-            <label>DNI</label><input type="text" name="nif" required><br/>
             
             
+            <table>
+                        <tr>
+                            <th colspan="2"><h3>DAR DE BAJA</h3></th> 
+
+                        </tr>
+                        <tr>
+                            <td><label>DNI</label></td>
+                            <td><input type="text" name="nif" required><br/></td> 
+
+
+                        </tr>
+           </table> 
             <input type="hidden" name="a" value="baja">
             <input type="submit" value="Dar de Baja"> 
             
