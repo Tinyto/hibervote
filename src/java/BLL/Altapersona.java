@@ -6,8 +6,11 @@
 package BLL;
 
 import DAO.NewHibernateUtil;
+import POJO.Direccion;
+import POJO.Persona;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.time.LocalDate;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -38,9 +41,21 @@ private SessionFactory con;
             throws ServletException, IOException {
         
         String name=request.getParameter("name");
+        String surname=request.getParameter("apellido");
         String phone=request.getParameter("phone");
+        String DNI=request.getParameter("nif");
+        LocalDate nacimiento=LocalDate.parse(request.getParameter("birthdate"));
         
         
+        
+        
+        String calle=request.getParameter("street");
+        String portal=request.getParameter("portal");
+        String piso=request.getParameter("floor");
+        
+        
+        Persona personaalta=new Persona(name, surname, phone,DNI, nacimiento);
+        Direccion direccionalta=new Direccion();
         
         
 //        response.setContentType("text/html;charset=UTF-8");
