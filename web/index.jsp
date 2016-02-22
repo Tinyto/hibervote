@@ -101,7 +101,7 @@
         
         
         <p><%
-            HttpSession ses=request.getSession();
+            HttpSession ses=request.getSession(true);
             if(ses.getAttribute("error")!=null){
             out.print(ses.getAttribute("error"));
             ses.setAttribute("error",null);

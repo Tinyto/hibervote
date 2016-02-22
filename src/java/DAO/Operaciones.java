@@ -6,6 +6,7 @@
 package DAO;
 
 import POJO.Persona;
+import java.util.Iterator;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -54,4 +55,19 @@ public class Operaciones {
         return 1;
     }
     
+    public Iterator getgente(SessionFactory con){
+        Session ses = con.openSession();
+        Transaction tx = ses.beginTransaction();
+        try{
+            
+            Iterator q= ses.createQuery("FROM Persona").list().iterator();
+            
+            return q;
+        }catch(Exception e){
+            tx.rollback();
+            return null;
+        }
+    }
 }
+        
+    
