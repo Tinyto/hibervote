@@ -32,6 +32,12 @@
 
 
                         </tr>
+                         <tr>
+                            <td><label>Apellido</label></td>
+                            <td><input type="text" name="lastname" required><br/></td> 
+
+
+                        </tr>
                         <tr>
                             <td><label>Teléfono</label></td>
                             <td><input type="text" name="phone" required><br/></td> 
@@ -69,7 +75,7 @@
                         </tr>
             
             </table>
-             <input type="hidden" name="a" value="alta">
+             <input type="hidden" name="a" value="Altapersona">
             <input type="submit" value="Dar de Alta"> 
         </form>
         <form method="POST" action="Dispatcher" id="formbaja">
@@ -88,7 +94,7 @@
 
                         </tr>
            </table> 
-            <input type="hidden" name="a" value="baja">
+            <input type="hidden" name="a" value="Bajapersona">
             <input type="submit" value="Dar de Baja"> 
             
         </form>

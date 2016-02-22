@@ -29,6 +29,10 @@ public class Persona  implements java.io.Serializable {
        this.dni = dni;
        this.cumpleanios = cumpleanios;
     }
+    
+    public Persona(String dni){
+        this.dni=dni;
+    }
    
     public Integer getId() {
         return this.id;
