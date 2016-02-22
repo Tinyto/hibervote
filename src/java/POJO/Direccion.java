@@ -24,6 +24,14 @@ public class Direccion  implements java.io.Serializable {
        this.piso = piso;
        this.persona = persona;
     }
+
+    public Direccion(String calle, String portal, String piso) {
+        this.calle = calle;
+        this.portal = portal;
+        this.piso = piso;
+    }
+    
+    
    
     public Integer getId() {
         return this.id;

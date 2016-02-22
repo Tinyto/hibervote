@@ -6,6 +6,7 @@
 package BLL;
 
 import DAO.NewHibernateUtil;
+import DAO.Operaciones;
 import POJO.Direccion;
 import POJO.Persona;
 import java.io.IOException;
@@ -15,6 +16,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import org.hibernate.SessionFactory;
 
 /**
@@ -40,6 +42,9 @@ private SessionFactory con;
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
+        
+        HttpSession session=request.getSession(true);
+        
         String name=request.getParameter("name");
         String surname=request.getParameter("apellido");
         String phone=request.getParameter("phone");
@@ -55,7 +60,18 @@ private SessionFactory con;
         
         
         Persona personaalta=new Persona(name, surname, phone,DNI, nacimiento);
-        Direccion direccionalta=new Direccion();
+        Direccion direccionalta=new Direccion(calle,portal,piso);
+        personaalta.setDireccion(direccionalta);
+        
+        Operaciones operation=new Operaciones();
+        int result=operation.Alta(personaalta, con);
+        
+        if(result==1){
+            session.setAttribute("error", "<span style='color:green'>Persona dada de alta correctamente</span>");
+        }
+        else{
+            session.setAttribute("error", "<span style='color:red'>Error añadiendo a la persona</span>");
+        }
         
         
 //        response.setContentType("text/html;charset=UTF-8");
