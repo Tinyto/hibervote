@@ -98,5 +98,14 @@
             <input type="submit" value="Dar de Baja"> 
             
         </form>
+        
+        
+        <p><%
+            HttpSession ses=request.getSession();
+            if(ses.getAttribute("error")!=null){
+            out.print(ses.getAttribute("error"));
+            ses.setAttribute("error",null);
+            }
+            %></p>
     </body>
 </html>

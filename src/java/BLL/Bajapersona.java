@@ -54,7 +54,7 @@ public class Bajapersona extends HttpServlet {
            session.setAttribute("error","<span style='color:red'>Error dando de baja, inténtelo de nuevo.</span>"); 
         }
        
-        
+       response.sendRedirect("index.jsp"); 
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
