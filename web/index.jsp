@@ -110,7 +110,7 @@
     </body>
     <p>-----------------------------------------------------------------------------------------</p>
     <p>-----------------------------------------------------------------------------------------</p>
-    <form method="POST" action="Dispatcher">
+    <form>
         
             <input type="hidden" name="a" value="Listarpersona">
             <input type="submit" value="Listar todas las personas"> 
